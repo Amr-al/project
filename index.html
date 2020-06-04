@@ -42,20 +42,6 @@
              alert("The passward must start with capital character and contain at least one digit and special character and its length must be 8 with no white space"); 
              return false;
              }
-        if(adress.length > 1)  out = "TRUE";
-        else  out = "FALSE";
-        if(out == "FALSE"){ 
-             alert("Enter valid Address!");
-              return false;
-              }
-        if(number.length !== 11 || number[0].match("0")) 
-         out = "TRUE";
-        else
-         out = "FALSE";
-        if(out == "FALSE")  { 
-            alert("The number must consist of 11 digits start with 0");
-             return false;
-             }
         if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
         out = "TRUE";
         else
@@ -64,6 +50,21 @@
             alert("Please,Entered a valid email address!"); 
             return false;
             }
+        if(adress.length > 1)  out = "TRUE";
+        else  out = "FALSE";
+        if(out == "FALSE"){ 
+             alert("Enter valid Address!");
+              return false;
+              }
+        if(number.length === 11 && number[0].match("0")) 
+         out = "TRUE";
+        else
+         out = "FALSE";
+        if(out == "FALSE")  { 
+            alert("The number must consist of 11 digits start with 0");
+             return false;
+             }
+       
 
 }
 </script> 
